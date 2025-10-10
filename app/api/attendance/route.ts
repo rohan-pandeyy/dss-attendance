@@ -19,7 +19,7 @@ export async function POST(req: Request) {
         CREATE TABLE IF NOT EXISTS attendance (
           id SERIAL PRIMARY KEY,
           name TEXT NOT NULL,
-          created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+          created_at TIMESTAMPTZ NOT NULL DEFAULT NOW() AT TIME ZONE 'Asia/Kolkata'
         );
       `
 
