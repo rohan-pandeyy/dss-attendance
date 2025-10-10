@@ -28,6 +28,7 @@ export function AttendanceForm() {
       setSuccess(true)
       setName("")
     } catch (err) {
+      console.error(err)
     } finally {
       setSubmitting(false)
     }

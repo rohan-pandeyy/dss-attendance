@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button"
 
 export function Navbar() {
   return (
-    <header className="fixed inset-x-0 top-0 z-30 border-b border-input bg-grey/1000 backdrop-blur-md">
+    <header className="fixed inset-x-0 top-0 z-30 border-b border-input bg-neutral-950/80 backdrop-blur-md">
       <nav className="mx-auto flex h-12 w-full max-w-5xl items-center justify-between px-4">
         <div className="flex items-center gap-2">
           <Image src="/images/dss-logo.png" alt="Data Science Society logo" width={28} height={28} priority />
