@@ -7,9 +7,7 @@ import "./globals.css"
 import { Suspense } from "react"
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
-  generator: "v0.app",
+  title: "Mark your attendance - DSS"
 }
 
 const inter = Inter({
