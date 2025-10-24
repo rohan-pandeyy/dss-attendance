@@ -12,6 +12,12 @@ export function AttendanceForm() {
   const [success, setSuccess] = React.useState(false)
   const [error, setError] = React.useState('')
 
+  const toTitleCase = (str: string) => {
+    return str.replace(
+      /\w\S*/g,
+      (txt) => txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase()
+    );
+  };
   const githubRegex = new RegExp('^https://github\\.com/[a-zA-Z0-9_-]+$');
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -60,12 +66,12 @@ export function AttendanceForm() {
           name='full-name'
           placeholder='Enter your full name'
           value={name}
-          onChange={(e) => setName(e.target.value)}
+          onChange={(e) => setName(toTitleCase(e.target.value))}
           className='h-12 rounded-lg text-base md:h-12'
           aria-required='true'
           autoComplete='name'
         />
-        <Label htmlFor='github-url' className='sr-only'>
+        {/* <Label htmlFor='github-url' className='sr-only'>
           GitHub URL
         </Label>
         <Input
@@ -76,7 +82,7 @@ export function AttendanceForm() {
           onChange={(e) => setGithub(e.target.value)}
           className='h-12 rounded-lg text-base md:h-12'
           autoComplete='url'
-        />
+        /> */}
       </div>
       {error && (
         <p role="alert" className="mt-1 text-center text-sm text-red-600 dark:text-red-400">

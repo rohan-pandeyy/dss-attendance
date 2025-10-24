@@ -17,7 +17,7 @@ export default function Page() {
         <div className="w-full rounded-lg border border-input bg-card/80 p-6 shadow-lg backdrop-blur-md md:p-8">
           <div className="mb-4 text-center md:mb-6">
             <h1 className="text-balance text-2xl font-semibold md:text-3xl">Welcome!</h1>
-            <p className="mt-2 text-sm text-black">Please enter your full name to log your attendance. Github URL is mandatory for Tech team,<br />optional otherwise</p>
+            <p className="mt-2 text-sm text-black">Please enter your full name to log your attendance.</p>
           </div>
           <AttendanceForm />
         </div>
